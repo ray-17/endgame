@@ -9,7 +9,7 @@ export default function Languages(){
             color: language.color
         }
         return (
-        <span
+        <span className="language-chip"
          style={styles}
          key={language.name}>
             {language.name}</span>
