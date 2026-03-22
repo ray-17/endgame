@@ -1,23 +1,22 @@
-import { useState } from "react"
 
 
 
-export default function Word(){
+export default function Word({currentWord, guess}) {
 
-    const [currentWord, setCurrentWord] = useState("react")
 
-    const letters = Array.from(currentWord.toUpperCase()).map((letter, index) => {
-        return(
+    const letters = Array.from(currentWord).map((letter, index) => {
+        return (
             <span
-            className="letters"
-            key={index}
-            >{letter}</span>
+                className="letters"
+                key={index}
+            >
+                {guess.includes(letter) ? letter.toUpperCase() : ""}</span>
         )
     });
 
 
 
-    return(
+    return (
         <section className="words">
             {letters}
         </section>

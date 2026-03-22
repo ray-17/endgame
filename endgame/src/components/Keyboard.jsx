@@ -1,27 +1,32 @@
-import { useState } from "react"
+import { clsx } from "clsx"
 
-
-export default function Keyboard() {
+export default function Keyboard(props) {
 
     const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
-    const [guess, setGuess] = useState([])
+    
 
     function pick(key) {
-        setGuess(prev =>
+        props.setGuess(prev =>
             prev.includes(key) ? prev : [...prev, key]
         )
     }
-
+    
     const keys = alphabet.split('').map((key, index) => {
+        const isGuessed = props.guess.includes(key)
+        const isCorrect = isGuessed && props.currentWord.includes(key)
+        const isWrong = isGuessed && !props.currentWord.includes(key)
+        const className = clsx({
+            correct: isCorrect,
+            wrong: isWrong
+        })
         return (
             <button key={index}
-                className="keys"
+                className={className}
                 onClick={() => pick(key)}>{key.toUpperCase()}</button>
         )
     })
 
-    console.log(guess)
 
     return (
         <section className="keyboard">

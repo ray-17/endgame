@@ -83,6 +83,7 @@ span.language-chip{
     padding: 4.5px;
     gap: 4.5px;
     font-weight: 700;
+    position: relative;
 }
 
 section.words{
@@ -119,7 +120,7 @@ section.keyboard{
     gap: 6px;
 }
 
-button.keys{
+button{
     height: 40px;
     width: 40px;
     border-radius: 4px;
@@ -130,6 +131,13 @@ button.keys{
     cursor: pointer;
 }
 
+button.correct{
+background-color: #10A95B;
+}
+
+button.wrong{
+    background-color: #EC5D49;
+}
 button.newgame{
     width: 228px;
     max-width: 450px;
@@ -144,4 +152,17 @@ button.newgame{
     margin-left: 107px;
 }
 
-
+span.language-chip.lost::before {
+    content: "💀";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 0.85rem;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    
+}
