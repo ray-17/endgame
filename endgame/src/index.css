@@ -160,6 +160,7 @@ button.wrong{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 150px;
 }
 
 button.newgame{
@@ -172,7 +173,7 @@ button.newgame{
     border: 1px solid #D7D7D7;
     background-color: #11B5E5;
     cursor: pointer;
-    margin-top: 36px;
+    
     
 }
 
