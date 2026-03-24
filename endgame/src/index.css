@@ -155,6 +155,13 @@ background-color: #10A95B;
 button.wrong{
     background-color: #EC5D49;
 }
+
+.newgame-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 button.newgame{
     width: 228px;
     max-width: 450px;
@@ -166,8 +173,10 @@ button.newgame{
     background-color: #11B5E5;
     cursor: pointer;
     margin-top: 36px;
-    margin-left: 107px;
+    
 }
+
+
 
 span.language-chip.lost::before {
     content: "💀";
