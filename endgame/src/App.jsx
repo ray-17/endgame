@@ -66,10 +66,10 @@ export default function App() {
         isOver={isGameOver}
       />
 
-      <div className="newgame-btn">
-      <button
-        onClick={() => newGame()}
-        className="newgame">New Game</button></div>
+    {isGameWon && <div className="newgame-btn">
+    <button
+      onClick={() => newGame()}
+      className="newgame">New Game</button></div>}
     </main>
   )
 }
